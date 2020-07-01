@@ -209,6 +209,11 @@ class TaskGroupDetailViewController: UIViewController, UITableViewDelegate, UITa
         inputTextField.text = ""                                                                    //空文字
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    /*
     /* textに答えを入力した時にキーボードを消す(textViewのprotocolに用意されているメソッド) */
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         return textView.resignFirstResponder()
@@ -223,4 +228,5 @@ class TaskGroupDetailViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.endEditing(true)
     }
+    */
 }

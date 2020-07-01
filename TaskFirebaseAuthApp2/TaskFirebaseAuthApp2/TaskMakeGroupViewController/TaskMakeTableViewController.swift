@@ -175,10 +175,9 @@ class TaskMakeTableViewController: UIViewController, UITableViewDelegate, UITabl
             self.showAlert(title:"エラー", message: "メンバーを選んでください")
         }else{
             groupCandidate.groupName = groupName
+            //グループを追加
+            GroupInfoManager.sharedInstance.appendGroupInfo(groupInfo: groupCandidate)
         }
-        
-        //グループを追加
-        GroupInfoManager.sharedInstance.appendGroupInfo(groupInfo: groupCandidate)
         
         /* ForDebug *
         for i in 0 ..< GroupInfoManager.sharedInstance.getGroupInfoCount() {
